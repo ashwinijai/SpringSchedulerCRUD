@@ -13,7 +13,7 @@ spring:
 
 scheduler:
   cron:
-    value: 0 */2 * ? * *
+    value: 0 */3 * ? * *
 server:
   port: 7001
 

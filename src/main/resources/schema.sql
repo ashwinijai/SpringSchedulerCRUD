@@ -11,3 +11,10 @@ CREATE TABLE  SCHEDULER_TEST(
   NAME varchar(100) ,
   COMMENTS varchar(100) );
 
+CREATE TABLE  CRON_VALUES(
+  TYPE varchar(50)  PRIMARY KEY,
+  CRON varchar(100) );
+
+--INSERT INTO CRON_VALUES values('Producer', '0 */1 * * * *');
+--INSERT INTO CRON_VALUES values('Consumer', '0 */2 * * * *');
+
