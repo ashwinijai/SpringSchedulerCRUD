@@ -15,6 +15,11 @@ CREATE TABLE  CRON_VALUES(
   TYPE varchar(50)  PRIMARY KEY,
   CRON varchar(100) );
 
+CREATE TABLE  CACHE_TABLE(
+  QUERYNAME varchar(50)  PRIMARY KEY,
+  QUERYVALUE varchar(100),
+  PROGRAMNAME varchar(100)
+  );
 --INSERT INTO CRON_VALUES values('Producer', '0 */1 * * * *');
 --INSERT INTO CRON_VALUES values('Consumer', '0 */2 * * * *');
 

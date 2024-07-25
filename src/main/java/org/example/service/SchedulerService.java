@@ -25,7 +25,7 @@ public class SchedulerService {
     @Autowired
     ConsumerTask consumerTask;
 
-    @Scheduled(cron="${scheduler.cron.value}")
+   // @Scheduled(cron="${scheduler.cron.value}")
     public void testCrud(){
         log.info("Parent Scheduler started");
         String producerCron = cronValuesRepository.findByType("Producer").getCron();
