@@ -15,12 +15,12 @@ public class CacheController {
     @Autowired
     CacheService cacheService;
 
-    @GetMapping("/getCacheValues")
+    @GetMapping("/getCacheValues/{programName}")
     public ResponseEntity<Map<String, String>> getCacheValues(@PathVariable("programName") String programName){
         return ResponseEntity.ok().body(cacheService.getQueryValues(programName));
     }
 
-    @GetMapping("/clearCacheValue")
+    @GetMapping("/clearCacheValue/{programName}")
     public ResponseEntity<String> removeCacheValues(@PathVariable("programName") String programName){
         cacheService.clearFromCache(programName);
         return ResponseEntity.ok().body("Cache cleared successfully");
