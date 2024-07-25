@@ -10,10 +10,15 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   hibernate:
     ddl-auto: update
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
 
 scheduler:
   cron:
     value: 0 */3 * ? * *
 server:
   port: 7001
+
+
 
