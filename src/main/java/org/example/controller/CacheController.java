@@ -22,7 +22,7 @@ public class CacheController {
 
     @GetMapping("/clearCacheValue/{programName}")
     public ResponseEntity<String> removeCacheValues(@PathVariable("programName") String programName){
-        cacheService.clearFromCache(programName);
-        return ResponseEntity.ok().body("Cache cleared successfully");
+        return ResponseEntity.ok().body("Cache cleared successfully at "+ cacheService.clearFromCache(programName));
     }
+
 }

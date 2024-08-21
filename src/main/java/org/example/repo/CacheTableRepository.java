@@ -12,4 +12,7 @@ import java.util.List;
 public interface CacheTableRepository extends JpaRepository<CacheTable, String> {
     @Query("select t from CacheTable t where t.programname = :program")
     List<CacheTable> findByProgramName(String program);
+
+    @Query("select t from CacheTable t where t.queryname = :program")
+    CacheTable findByQueryName(String program);
 }

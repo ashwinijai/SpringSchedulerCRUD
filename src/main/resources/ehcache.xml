@@ -5,7 +5,7 @@
     <!-- Default cache template -->
     <cache-template name="default">
         <expiry>
-            <ttl unit="seconds">3600</ttl>
+            <none/>
         </expiry>
         <resources>
             <heap>1000</heap>
